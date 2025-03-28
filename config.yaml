@@ -36,3 +36,24 @@ modeling:
     max_features: 0.5
     # DO not change the following
     oob_score: true
+m_params:
+  download:
+    artifact_name: "sample.csv"
+    artifact_type: "raw_data"
+    artifact_description: "Raw file as downloaded"
+  basic_cleaning:
+    input_artifact: "sample.csv:latest"
+    output_artifact: "clean_sample.csv"
+    output_type: "clean_sample"
+    output_description: "Data with outliers and null values removed"
+  data_check:
+    csv: "clean_sample.csv:latest"
+    ref: "clean_sample.csv:reference"
+  data_split:
+    input: "clean_sample.csv:latest"
+  train_random_forest:
+    trainval_artifact: "trainval_data.csv:latest"
+    output_artifact: "random_forest_model"
+  test_regression_model:
+    mlflow_model: "random_forest_model:prod"
+    test_dataset: "test_data.csv:latest"
