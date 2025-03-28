@@ -1,6 +1,7 @@
+
 #!/usr/bin/env python
 """
-Download from W&B the raw dataset and apply some basic data cleaning, exporting the result to a new artifact
+Performs basic cleaning on the data and save the results in Weights & Biases
 """
 import argparse
 import logging
