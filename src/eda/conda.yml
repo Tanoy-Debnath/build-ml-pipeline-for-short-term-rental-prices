@@ -10,8 +10,8 @@ dependencies:
   - pip=23.3.1
   - scikit-learn=1.3.2
   - jupyterlab=4.1.3
-  - ydata-profiling
-  - ipywidgets
+  - ydata-profiling>=4.3.0
+  - ipywidgets>=8.0.0
   - nodejs  # Required for JupyterLab extensions
   - pip:
       - mlflow==2.8.1
