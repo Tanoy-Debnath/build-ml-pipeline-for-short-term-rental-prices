@@ -65,7 +65,7 @@ def test_row_count(data: pd.DataFrame):
     Test the number of rows in the dataset
     Reasonable number of rows should be between 15000 and 1000000
     """
-    assert 14000 < data.shape[0] < 15000
+    assert 15000 < data.shape[0] < 1000000
 
 def test_price_range(data: pd.DataFrame, min_price: float, max_price: float):
     """
